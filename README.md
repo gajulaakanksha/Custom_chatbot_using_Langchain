@@ -24,19 +24,6 @@ This project implements a custom chatbot using **LangChain**, designed to extrac
 
 ---
 
-## Key Libraries & Their Roles
-
-| Library                        | Function |
-|--------------------------------|---------------------------------------------------------------|
-| **Flask**                     | Creates a web API for handling chatbot requests. |
-| **WebBaseLoader**              | Loads web pages as documents from the given URL. |
-| **HuggingFaceEmbeddings**      | Generates vector embeddings using the `"all-MiniLM-L6-v2"` model. |
-| **FAISS**                      | Stores and retrieves vectorized documents efficiently for fast search. |
-| **ConversationalRetrievalChain** | Manages conversation memory and retrieves relevant documents. |
-| **ChatGroq**                   | Uses Groq’s LLM for generating chatbot responses. |
-
----
-
 ## Installation & Setup
 ### **1. Clone the Repository**
 ```sh
@@ -106,6 +93,39 @@ Use curl or a tool like Postman to send a POST request
 ```
 
 ---
+
+## Description
+This project is a Flask-based chatbot that uses LangChain, FAISS, and Groq’s LLM to provide intelligent responses based on real-time scraped data. The chatbot extracts course information from Brainlox and enables users to ask questions about technical courses interactively.
+
+#### Key Libraries & Their Roles
+
+| Library                        | Function |
+|--------------------------------|---------------------------------------------------------------|
+| **Flask**                     | Creates a web API for handling chatbot requests. |
+| **WebBaseLoader**              | Loads web pages as documents from the given URL. |
+| **HuggingFaceEmbeddings**      | Generates vector embeddings using the `"all-MiniLM-L6-v2"` model. |
+| **FAISS**                      | Stores and retrieves vectorized documents efficiently for fast search. |
+| **ConversationalRetrievalChain** | Manages conversation memory and retrieves relevant documents. |
+| **ChatGroq**                   | Uses Groq’s LLM for generating chatbot responses. |
+
+---
+
+## Example Queries And Outputs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ##  Summary
 
