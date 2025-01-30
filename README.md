@@ -24,6 +24,19 @@ This project implements a custom chatbot using **LangChain**, designed to extrac
 
 ---
 
+## Key Libraries & Their Roles
+
+| Library                        | Function |
+|--------------------------------|---------------------------------------------------------------|
+| **Flask**                     | Creates a web API for handling chatbot requests. |
+| **WebBaseLoader**              | Loads web pages as documents from the given URL. |
+| **HuggingFaceEmbeddings**      | Generates vector embeddings using the `"all-MiniLM-L6-v2"` model. |
+| **FAISS**                      | Stores and retrieves vectorized documents efficiently for fast search. |
+| **ConversationalRetrievalChain** | Manages conversation memory and retrieves relevant documents. |
+| **ChatGroq**                   | Uses Groq’s LLM for generating chatbot responses. |
+
+---
+
 ## Installation & Setup
 ### **1. Clone the Repository**
 ```sh
@@ -55,7 +68,15 @@ python app.py
 ```
 The server will start at **http://127.0.0.1:5000**
 
+## Test the Chatbot API
+Use curl or a tool like Postman to send a POST request
+
 ### **2. API Endpoints**
+
+
+
+
+
 #### **Chat Endpoint** (`POST /chat`)
 **Request:**
 ```json
