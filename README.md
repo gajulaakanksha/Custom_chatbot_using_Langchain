@@ -25,6 +25,11 @@ This project implements a custom chatbot using **LangChain**, designed to extrac
 ---
 
 ## Installation & Setup
+### Prerequisites
+Ensure you have the following installed:
+- Python 3.10+
+- pip
+  
 ### **1. Clone the Repository**
 ```sh
  git clone <your-github-repo-url>
@@ -112,19 +117,13 @@ This project is a Flask-based chatbot that uses LangChain, FAISS, and Groq’s L
 
 ## Example Queries And Outputs
 
+**1. What are the available courses?"**
 
+![f_1](https://github.com/user-attachments/assets/c86c199a-b14f-4fd3-a0b1-c53e0fdb581a)
 
+**2. Show me AI Courses.**
 
-
-
-
-
-
-
-
-
-
-
+![f_2](https://github.com/user-attachments/assets/99830d92-3aad-465f-bd51-e36b4b00558f)
 
 
 ##  Summary
