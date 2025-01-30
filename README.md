@@ -3,11 +3,24 @@
 ## Overview
 This project implements a custom chatbot using **LangChain**, designed to extract course data from **Brainlox** and interact with users via a **Flask RESTful API**. The chatbot retrieves relevant information based on user queries using a vector store for efficient search and retrieval.
 
+
 ## Features
 - Extracts course data from **https://brainlox.com/courses/category/technical** using LangChain's URL loaders.
 - Generates **embeddings** and stores them in a **vector database (FAISS)**.
 - Provides a **Flask API** for real-time chatbot interactions.
 - Supports **multi-turn conversations** by maintaining chat history.
+
+---
+
+## Project Features
+
+| Feature               | Description |
+|-----------------------|-------------|
+| **Web Scraping**      | Extracts course data from Brainlox. |
+| **Embeddings**        | Uses Hugging Face embeddings (`all-MiniLM-L6-v2`). |
+| **Vector Database**   | Stores embeddings in FAISS for efficient retrieval. |
+| **Chatbot API**       | Responds to user queries via a Flask API. |
+| **Conversational AI** | Supports chat history for multi-turn conversations. |
 
 ---
 
@@ -22,6 +35,10 @@ This project implements a custom chatbot using **LangChain**, designed to extrac
 ```sh
 python -m venv venv
 source venv/bin/activate  # On Windows use: venv\Scripts\activate
+```
+After creation store the Groq API Key as :
+```
+GROQ_API_KEY="Your Groq API Key"
 ```
 
 ### **3. Install Dependencies**
@@ -59,6 +76,24 @@ The server will start at **http://127.0.0.1:5000**
     ]
 }
 ```
+
+---
+
+##  Summary
+
+| Step | Function | Description |
+|------|----------|-------------|
+| 1️⃣ | `load_documents()` | Scrapes Brainlox course data using LangChain. |
+| 2️⃣ | `create_vector_store()` | Converts text into vector embeddings using FAISS. |
+| 3️⃣ | **Flask API** | Creates a `POST /chat` endpoint. |
+| 4️⃣ | **Chat History Formatting** | Converts chat history into the correct format. |
+| 5️⃣ | **Conversational Chain** | Uses **Groq’s LLM** + **FAISS retriever** for responses. |
+| 6️⃣ | **Chatbot Response** | Returns a **context-aware answer** with updated history. |
+
+---
+
+##  Conclusion
+This Flask-based chatbot effectively combines web scraping, vector storage, and LLM-powered conversation to answer user queries based on real course data.
 
 ---
 
