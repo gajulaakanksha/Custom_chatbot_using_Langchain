@@ -62,22 +62,29 @@ pip install -r requirements.txt
 ---
 
 ## Running the Application
-### **1. Start the Flask Server**
+### **Start the Flask Server**
 ```sh
 python app.py
 ```
 The server will start at **http://127.0.0.1:5000**
 
+---
+
 ## Test the Chatbot API
 Use curl or a tool like Postman to send a POST request
 
-### **2. API Endpoints**
-
-
-
-  POST /chat
-
+### **API Endpoints
 #### **Chat Endpoint** (`POST /chat`)
+
+```http
+  POST /http://127.0.0.1:5000/chat
+```
+
+| Request Body | Type     | Response                      |
+| :-------- | :------- | :-------------------------------- |
+| `"message":"what is the duration for the LEARN SCRATCH PROGRAMMING course?"` | `raw` | "response":"The duration is 16 lessons." |
+
+
 **Request:**
 ```json
 {
