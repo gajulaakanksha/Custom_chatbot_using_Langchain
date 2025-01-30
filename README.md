@@ -75,7 +75,7 @@ Use curl or a tool like Postman to send a POST request
 
 
 
-
+  POST /chat
 
 #### **Chat Endpoint** (`POST /chat`)
 **Request:**
